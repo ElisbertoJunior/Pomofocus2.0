@@ -1,0 +1,104 @@
+
+import { elements } from "./elements.js"
+
+const {
+  buttonPlay,
+  buttonStop,
+  buttonPlus,
+  buttonMinus,
+  buttonTree,
+  buttonRain,
+  buttonCoffee,
+  buttonFire,
+} = elements
+
+export function Events({
+  sound,
+  timer
+}) {
+
+  buttonPlay.addEventListener('click', () => {
+    sound.pressButton()
+    timer.countdown()
+  })
+
+  buttonStop.addEventListener('click', () => {
+    sound.pressButton()
+    timer.stopTimer()
+  })
+
+  buttonPlus.addEventListener('click', () => {
+    sound.pressButton()
+    timer.moreMinutes()
+  })
+
+  buttonMinus.addEventListener('click', () => {
+    sound.pressButton()
+    timer.lessMinutes()
+  })
+
+  buttonTree.addEventListener('click', () => {
+   if (buttonTree.classList.toggle('selected') == true) {
+        sound.pauseMusic()
+        sound.playTree()
+
+      } else {
+        sound.pauseMusic()
+        buttonTree.classList.remove('selected')
+      }
+
+      buttonRain.classList.remove('selected')
+      buttonCoffee.classList.remove('selected')
+      buttonFire.classList.remove('selected')
+    
+  })
+
+  buttonRain.addEventListener('click', () => {
+    if(buttonRain.classList.toggle('selected') == true){
+      sound.pauseMusic()
+      sound.playRain()
+
+    } else {
+      sound.pauseMusic()
+      buttonRain.classList.remove('selected')
+    }
+
+    buttonTree.classList.remove('selected')
+    buttonCoffee.classList.remove('selected')
+    buttonFire.classList.remove('selected')
+  
+
+  })
+
+  buttonCoffee.addEventListener('click', () => {
+    if (buttonCoffee.classList.toggle('selected') == true) {
+      sound.pauseMusic()
+      sound.playRoom()
+
+    } else {
+      sound.pauseMusic()
+      buttonCoffee.classList.remove('selected')
+    }
+
+    buttonTree.classList.remove('selected')
+    buttonRain.classList.remove('selected')
+    buttonFire.classList.remove('selected')    
+  })
+
+  buttonFire.addEventListener('click', () => {
+    if (buttonFire.classList.toggle('selected') == true) {
+      sound.pauseMusic()
+      sound.playFire()
+
+    } else {
+      sound.pauseMusic()
+      buttonFire.classList.remove('selected')
+    }
+
+    buttonTree.classList.remove('selected')
+    buttonRain.classList.remove('selected')
+    buttonCoffee.classList.remove('selected')
+
+  })
+
+}

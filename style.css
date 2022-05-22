@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --bg-color: #E1E1E6;
+  --bg-color-select: #02799D;
+  --color-text: #323238;
+  --bg-body: #FFFFFF;
+  --fill-color: #323238;
+  --bg-input: #323238;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--bg-body);
+}
+
+main {
+  width: 82rem;
+  height: 33.5rem;
+ 
+}
+.settings {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.time {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12.6rem;
+  line-height: 14.8rem;
+}
+
+
+.buttonSettings {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2.5rem;
+}
+
+.buttonSettings button {
+  background: transparent;
+  border: none;
+  cursor: pointer
+}
+
+
+.soundButtons{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+
+  gap: 2rem;
+}
+
+.soundButtons button{
+  display: flex;
+  justify-self: center;
+  border: none;
+  background: var(--bg-color);
+  cursor: pointer;
+  width: 13.8rem;
+  height: 15.2rem;
+  border-radius: 15%;
+}
+
+.selected {
+  color: #FFFFFF;
+  background: var(--bg-color-select) !important;
+}
+
+
+@media screen and (max-width: 83.8rem) {
+
+  body {
+    align-items: flex-start;
+  }
+
+  .settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .time {
+    font-size: 10rem;
+  }
+
+  .buttonSettings button {
+    margin-bottom: 5rem;
+  }
+  
+  
+  .soundButtons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    justify-self: center;
+    gap: 2rem;
+  }
+  
+
+}
