@@ -10,6 +10,10 @@ const {
   buttonRain,
   buttonCoffee,
   buttonFire,
+  inputTree,
+  inputRain,
+  inputRoom,
+  inputFire
 } = elements
 
 export function Events({
@@ -99,6 +103,26 @@ export function Events({
     buttonRain.classList.remove('selected')
     buttonCoffee.classList.remove('selected')
 
+  })
+
+  inputTree.addEventListener('input', () => {
+    let volume = Number(inputTree.value / 100)
+    sound.volumeTree(volume)
+  })
+
+  inputRain.addEventListener('input', () => {
+    let volume = Number(inputRain.value / 100)
+    sound.volumeRain(volume)
+  })
+
+  inputRoom.addEventListener('input', () => {
+    let volume = Number(inputRoom.value / 100)
+    sound.volumeRoom(volume)
+  })
+
+  inputFire.addEventListener('input', () =>{
+    let volume = Number(inputFire.value / 100)
+    sound.volumeFire(volume)
   })
 
 }

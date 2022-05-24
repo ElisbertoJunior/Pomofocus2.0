@@ -12,6 +12,11 @@ export default function Sounds() {
   room.loop = true
   fire.loop = true
 
+  tree.volume = 0.5
+  rain.volume = 0.5
+  room.volume = 0.5
+  fire.volume = 0.5
+
 
   function playRain() {
     rain.play()
@@ -38,7 +43,6 @@ export default function Sounds() {
   }
 
  
-
   function pressButton() {
     buttonPressAudio.play()
   }
@@ -47,6 +51,23 @@ export default function Sounds() {
     kitchenTimer.play()
   }
 
+  function volumeTree (value) {
+    tree.volume = value
+  }
+
+  function volumeRain (value) {
+    rain.volume = value
+  }
+
+  function volumeRoom(value) {
+    room.volume = value
+  }
+
+  function volumeFire (value) {
+    fire.volume = value
+  }
+
+  
   return {
         rain,
         tree,
@@ -59,6 +80,10 @@ export default function Sounds() {
         pauseMusic,
         pressButton,
         timeEnd,
+        volumeTree,
+        volumeRain,
+        volumeRoom,
+        volumeFire
   }
 
 

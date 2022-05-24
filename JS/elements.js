@@ -12,6 +12,17 @@ const buttonRain = document.querySelector(".buttonRain")
 const buttonCoffee = document.querySelector(".buttonCoffee")
 const buttonFire = document.querySelector(".buttonFire")
 
+const buttonMode = document.querySelector(".buttonMode")
+const mooonImage = document.querySelector(".moon")
+const sumImage = document.querySelector(".sum")
+const page = document.querySelector(".page")
+
+const inputTree = document.querySelector(".sizeTree")
+const inputRain = document.querySelector(".sizeRain")
+const inputRoom = document.querySelector(".sizeRoom")
+const inputFire = document.querySelector(".sizeFire")
+
+
 
 
 export const elements = {
@@ -25,6 +36,13 @@ export const elements = {
   buttonRain,
   buttonCoffee,
   buttonFire,
-  
+  buttonMode,
+  page,
+  mooonImage,
+  sumImage,
+  inputTree,
+  inputRain,
+  inputRoom,
+  inputFire
  
 }

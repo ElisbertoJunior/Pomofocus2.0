@@ -31,6 +31,9 @@
 - [x]  Cronômetro
 - [x]  Botões de controles
 - [x]  Músicas para escolher enquanto o foca na sua tarefa
+- [x]  Modo Dark Adicionado
+- [x]  Controle do volume das músicas
+
 
 
 
@@ -40,7 +43,7 @@
 # DEMO 
 
 <h1 align="center">
-    <img src="./assets/pomofocusDesktop.gif">
-    <img src="./assets/pomofocusMobile.gif">
-    
+    <img src="./assets/pomofocusDarkMode.gif">
+    <img src="./assets/pomofocusDarkModeMobile.gif">
+ 
 </h1>

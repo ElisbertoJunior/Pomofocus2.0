@@ -10,9 +10,16 @@
   --bg-color-select: #02799D;
   --color-text: #323238;
   --bg-body: #FFFFFF;
-  --fill-color: #323238;
-  --bg-input: #323238;
+  --color-text-svg: #FFFFFF;
 }
+
+.darkMode {
+  --bg-color: #29292E;
+  --bg-color-select: #0A3442;
+  --color-text: white;
+  --bg-body: black;
+}
+
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -21,18 +28,34 @@ body {
   align-items: center;
   min-height: 100vh;
   background: var(--bg-body);
+
 }
 
 main {
   width: 82rem;
   height: 33.5rem;
- 
+
+  position: relative;
 }
+
+.buttonMode {
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  background: transparent;
+  position: fixed;
+  right: 10rem;
+  top: 5rem;
+  cursor: pointer;
+}
+
 .settings {
   display: flex;
   text-align: center;
   justify-content: space-between;
 }
+
+
 
 .time {
   font-family: 'Roboto';
@@ -40,6 +63,7 @@ main {
   font-weight: 500;
   font-size: 12.6rem;
   line-height: 14.8rem;
+  color: var(--color-text);
 }
 
 
@@ -49,10 +73,13 @@ main {
   margin-top: 2.5rem;
 }
 
+
+
 .buttonSettings button {
   background: transparent;
   border: none;
-  cursor: pointer
+  cursor: pointer;
+  color: var(--color-text);
 }
 
 
@@ -61,11 +88,46 @@ main {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   align-items: center;
-
   gap: 2rem;
 }
 
-.soundButtons button{
+.card {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+input {
+  position: absolute;
+  width: 10rem;
+  height: 0.5rem;
+  bottom: 1.5rem;
+  appearance: none;
+  border-radius: 2rem;
+  background: var(--color-text);
+}
+
+
+input[type='range']::-webkit-slider-runnable-track{
+  background: var(--color-text);
+  width: 9rem;
+  height: .4rem;
+  border-radius: .5rem;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  width: 1.6rem; 
+  height: 1.6rem;
+  margin-top: -.6rem;
+  background: var(--color-text);
+  border-radius: 50%
+
+}
+
+
+.soundButtons button {
   display: flex;
   justify-self: center;
   border: none;
@@ -74,15 +136,43 @@ main {
   width: 13.8rem;
   height: 15.2rem;
   border-radius: 15%;
+  }
+
+ 
+.soundButtons svg, input {
+  color: var(--color-text);
 }
 
-.selected {
-  color: #FFFFFF;
+
+  
+
+.selected svg {
+  color: var(--color-text-svg) ;
+  
   background: var(--bg-color-select) !important;
+  width: 13.8rem;
+  height: 15.2rem;
+  border-radius: 15%;
+
 }
+
+.hide {
+  display: none;
+}
+
+
+.selected + input[type='range']::-webkit-slider-runnable-track, .selected + input[type='range']::-webkit-slider-thumb{
+  background:  var(--color-text-svg) ;
+}
+
 
 
 @media screen and (max-width: 83.8rem) {
+
+  .buttonMode {
+    right: 5rem;
+    top: 70rem;
+  }
 
   body {
     align-items: flex-start;
