@@ -11,7 +11,7 @@
 
 # About
 
-<p> Desafio concluido - Além de Cronômetro, tem algumas funções de músicas para te ajudar a focar na suas tarefas diarias. </p>
+<p> Desafio concluido - Cronômetro, tem algumas funções de músicas para te ajudar a focar na suas tarefas diarias. </p>
 
 <br>
 
